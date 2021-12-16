@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-			<title>Event::Interrupt</title>
+			<title>IO::Event::Selector</title>
 		
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -29,24 +29,23 @@
 		
 		<main>
 			
-	<h1><code class="language-ruby">Event::Interrupt</code></h1>
+	<h1><code class="language-ruby">IO::Event::Selector</code></h1>
 	
-	<p>A thread safe synchronisation primative.</p>
+		
 	
 	
+	<section>
+	<h2>Nested</h2>
 	
+	<ul>
+		<li><a href="Select/index.html"><code class="language-ruby">IO::Event::Selector::Select</code></a></li>
+	</ul>
+	</section>
 	
 	<section>
 	<h2>Definitions</h2>
 	
-	<section id="Event::Interrupt#signal"><h3><code class="language-ruby">def signal</code></h3><p>Send a sigle byte interrupt.</p>
-<details>
-						<summary><h4>Implementation</h4></summary>
-						<pre><code class="language-ruby">def signal
-	@output.write('.')
-	@output.flush
-end</code></pre>
-					</details></section>	</section>
+		</section>
 	
 	
 
