@@ -12,6 +12,7 @@
 		
 		<script src="../_components/jquery/jquery.min.js"></script>
 		<script src="../_components/jquery-syntax/jquery.syntax.min.js"></script>
+		<script src="../_components/mermaid/mermaid.min.js"></script>
 		
 		<script src="../_static/links.js"></script>
 		
@@ -20,6 +21,12 @@
 			jQuery(function($) {
 				$.syntax();
 			});
+			
+			let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+			let config = {theme: 'light'};
+			if (isDarkMode) config.theme = 'dark';
+			else config.theme = 'forest';
+			mermaid.initialize(config);
 		//]]>
 		</script>
 	</head>
@@ -51,7 +58,9 @@
 							<p>Enforces the selector interface and delegates operations to a wrapped selector instance.</p>
 
 					
-					<ul class="index"></ul>				</li></ul>				</li><li>
+					<ul class="index"><li>
+					
+									</li></ul>				</li></ul>				</li><li>
 						<a href="./IO::Event/Interrupt/index.html"><code class="language-ruby">class Interrupt</code></a>
 						
 						

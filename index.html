@@ -13,6 +13,7 @@
 		
 		<script src="_components/jquery/jquery.min.js"></script>
 		<script src="_components/jquery-syntax/jquery.syntax.min.js"></script>
+		<script src="_components/mermaid/mermaid.min.js"></script>
 		
 		<script src="_static/links.js"></script>
 		
@@ -21,6 +22,12 @@
 			jQuery(function($) {
 				$.syntax();
 			});
+			
+			let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+			let config = {theme: 'light'};
+			if (isDarkMode) config.theme = 'dark';
+			else config.theme = 'forest';
+			mermaid.initialize(config);
 		//]]>
 		</script>
 	</head>
@@ -31,7 +38,7 @@
 		<main>
 			
 	<h1 style="text-align: center"><object type="image/svg+xml" data="logo.svg"></object></h1><p>An event loop.</p>
-<p><a href="https://github.com/socketry/event/actions?workflow=Development"><img src="https://github.com/socketry/event/workflows/Development/badge.svg" alt="Development Status"/></a></p>
+<p><a href="https://github.com/socketry/io-event/actions?workflow=Development"><img src="https://github.com/socketry/io-event/workflows/Development/badge.svg" alt="Development Status"/></a></p>
 <section id="usage"><h2>Usage</h2>
 <p>Please browse the <a href="source/index.html">source code index</a> or refer to the guides below.</p>
 

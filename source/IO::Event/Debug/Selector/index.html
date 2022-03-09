@@ -12,6 +12,7 @@
 		
 		<script src="../../../../_components/jquery/jquery.min.js"></script>
 		<script src="../../../../_components/jquery-syntax/jquery.syntax.min.js"></script>
+		<script src="../../../../_components/mermaid/mermaid.min.js"></script>
 		
 		<script src="../../../../_static/links.js"></script>
 		
@@ -20,6 +21,12 @@
 			jQuery(function($) {
 				$.syntax();
 			});
+			
+			let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+			let config = {theme: 'light'};
+			if (isDarkMode) config.theme = 'dark';
+			else config.theme = 'forest';
+			mermaid.initialize(config);
 		//]]>
 		</script>
 	</head>
@@ -39,7 +46,13 @@
 	<section>
 	<h2>Definitions</h2>
 	
-		</section>
+	<section id="IO::Event::Debug::Selector#transfer"><h3><code class="language-ruby">def transfer</code></h3><p>Transfer from the calling fiber to the event loop.</p>
+<details>
+						<summary><h4>Implementation</h4></summary>
+						<pre><code class="language-ruby">def transfer
+	@selector.transfer
+end</code></pre>
+					</details></section>	</section>
 	
 	
 
@@ -48,3 +61,4 @@
 		</main>
 	</body>
 </html>
+
